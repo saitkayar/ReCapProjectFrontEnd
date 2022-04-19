@@ -1,0 +1,36 @@
+
+<div *ngIf="dataLoaded==false" class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  
+
+<table *ngIf="dataLoaded!=false" class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive mt-5">
+    <thead class="thead-inverse|thead-default">
+      <tr>
+       
+        <th>Description</th>
+        <th>ModelYear</th>
+        <th>Brand</th>
+        <th>Color</th>
+   
+        <th>Price</th>
+     
+     
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cars">
+       
+          <td>{{item.description}}</td>
+     
+          <td>{{item.modelYear}}</td>
+          <td>{{item.brandId}}</td>
+          <td>{{item.colorId}}</td>
+          <td>{{item.dailyPrice}}</td>
+         
+        </tr>
+   
+      </tbody>
+  </table>
+  
+  

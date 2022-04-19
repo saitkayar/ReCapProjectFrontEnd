@@ -1,0 +1,22 @@
+<table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive mt-5">
+  <thead class="thead-inverse|thead-default">
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Color</th>
+      <th>Price</th>
+   
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cardetails">
+     
+        <td>{{item.carName}}</td>
+        <td>{{item.brandName}}</td>
+        <td>{{item.colorName}}</td>
+        <td>{{item.dailyPrice}}</td>
+      </tr>
+ 
+    </tbody>
+</table>
+

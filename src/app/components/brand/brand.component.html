@@ -1,0 +1,9 @@
+
+
+<ul class="list-group">
+  <li class="list-group-item text-danger" routerLink="/cars" >Brands</li>
+  <li *ngFor="let brand of brands" routerLink="/cars/brand/{{brand.id}}"   (click)="setCurrentBrand(brand)" [class]="getCurrentBrandClass(brand)">{{brand.brandName}}</li>
+
+</ul>
+
+ <h5 *ngIf="currentBrand">{{currentBrand.brandName}}</h5>
