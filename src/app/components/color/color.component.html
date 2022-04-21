@@ -1,8 +1,21 @@
 
 <ul class="list-group mt-5">
   <li class="list-group-item">Colors</li>
-  <!-- <li *ngFor="let color of colors" routerLink="/cars/brand/{{color.id}}"[class]="getCurrentColorClass(color)" (click)="setCurrentColor(color)">{{color.colorName}}</li> -->
+  <li *ngFor="let color of colors" routerLink="/cars/color/{{color.id}}"[class]="getCurrentColorClass(color)" (click)="setCurrentColor(color)">{{color.colorName|uppercase}}</li>
 
 </ul>
 
  <h6 *ngIf="currentColor">{{currentColor.colorName}}</h6>
+
+
+ <!-- <div class="row">
+  <div class="col-7">
+ <select class="form-select " >
+  <option selected>Colors</option>
+  <option *ngFor="let color of colors" routerLink="/cars/color/{{color.id}}"[class]="getCurrentColorClass(color)" (click)="setCurrentColor(color)">{{color.colorName}}</option>
+  
+</select>
+</div>
+<div class="col-2"><button class="btn btn-primary">Filtrele</button>
+</div>
+</div> -->

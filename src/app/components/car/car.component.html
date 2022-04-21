@@ -1,8 +1,15 @@
 
+<div class="mb-3">
+  <label for="filter" class="form-label">Arama</label>
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filter" placeholder="arayınız">
+</div>
+<div *ngIf="filterText" class="alert alert-success">{{filterText}} aradınız</div>
+
 <div *ngIf="dataLoaded==false" class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
   
+
 
 <table *ngIf="dataLoaded!=false" class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive mt-5">
     <thead class="thead-inverse|thead-default">
@@ -19,7 +26,7 @@
       </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of cars">
+        <tr *ngFor="let item of cars |filter:filterText">
        
           <td>{{item.description}}</td>
      

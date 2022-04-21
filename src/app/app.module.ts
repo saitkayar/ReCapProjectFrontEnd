@@ -12,6 +12,8 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
 import { RentalComponent } from './components/rental/rental.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarImageComponent } from './components/car-image/car-image.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { CarImageComponent } from './components/car-image/car-image.component';
     CarComponent,
     CarDetailComponent,
     RentalComponent,
-    CarImageComponent
+    CarImageComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
