@@ -3,6 +3,7 @@ import { Brand } from 'src/app/models/brand';
 import{HttpClient} from '@angular/common/http'; 
 
 import { BrandService } from 'src/app/services/brand.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-brand',
@@ -13,6 +14,7 @@ export class BrandComponent implements OnInit {
 
   brands:Brand[]=[];
 currentBrand:Brand;
+
 
   constructor(private brandService:BrandService) { }
 

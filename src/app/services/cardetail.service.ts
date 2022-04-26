@@ -31,4 +31,7 @@ apiUrl="https://localhost:44396/api/"
     let newPath=this.apiUrl+"cars/getcarbybrand?brandId="+colorId;
     return this.httpClient.get<ListResponseModel<Car>>(newPath);
   }
+  add(car:Car){
+    return this.httpClient.post(this.apiUrl+"Cars/add",car,{responseType: 'text'})
+  }
 }

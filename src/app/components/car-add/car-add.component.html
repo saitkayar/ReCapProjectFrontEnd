@@ -1,0 +1,43 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">Araba Ekle</div>
+      <div class="card-body ">
+        <form [formGroup]="carAddForm" >
+            <div class="mb-3">
+            <label for="CarDescription">Açıklama</label>
+          <div class="form-group">
+              <input type="text" formControlName="description" id="CarDescription" placeholder="Açıklama" >
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="CarDescription">MOdel Yılı</label>
+          <div class="form-group">
+            <input type="number" formControlName="modelYear" id="modelYear" placeholder="Yılı" >
+        </div></div>
+        <div class="mb-3">
+        <label for="CarDescription">Günlük Fiyat</label>
+        <div class="form-group">
+            <input type="number" formControlName="dailyPrice" id="dailyPrice" placeholder="fiyat" >
+        </div> </div>
+        <div class="mb-3">
+        <label for="CarDescription">Renk</label>
+        <div class="form-group">
+            <input type="number" formControlName="colorId" id="colorId" placeholder="colorId" >
+        </div> </div>
+        <div class="mb-3">
+        <label for="CarDescription">MArka</label>
+        <div class="form-group">
+            <input type="number" formControlName="brandId" id="brandId" placeholder="brandId" >
+        </div> </div>
+        
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" (click)="add()">
+            Ekle
+        </button>
+    </div>
+    </div>
+  </div>
+</div>
