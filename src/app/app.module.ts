@@ -10,7 +10,7 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { CarComponent } from './components/car/car.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import { RentalComponent } from './components/rental/rental.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CarImageComponent } from './components/car-image/car-image.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
@@ -20,6 +20,7 @@ import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { CarAddComponent } from './components/car-add/car-add.component';
 import { LoginComponent } from './components/login/login.component'
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,9 @@ import { LoginComponent } from './components/login/login.component'
     })
 
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
